@@ -22,6 +22,12 @@ $(document).ready(function() {
     thermostat.powerSaveSwitch();
   });
 
+  $('#reset-button').click(function(){
+    thermostat.reset();
+    updateTemp();
+    updateUsage();
+  });
+
   function updateTemp() {
     $('#current-temp').text(thermostat.getTemp());
   }

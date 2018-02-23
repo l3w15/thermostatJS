@@ -3,13 +3,19 @@
   <head>
     <meta charset="utf-8">
     <title>Thermostat</title>
-    <script type="text/javascript" src="src/Thermostat.js">
+    <script type="text/javascript" src="src/thermostat.js">
     </script>
+
     <link rel="stylesheet" href="css/thermostat.css">
     <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
   </head>
   <body>
-    <div class="container eco">
+    <div class="weather">
+      <h2 id="location"></h2>
+      <h2 id="local-temp">&deg;C</h2>
+      <h2 id="weather-description"></h2>
+    </div>
+    <div class="thermostat eco">
       <div class="temp-display">
         <h1 id="current-temp"></h1>
         <span id="usage"></span>  <!-- high-usage, low-usage  -->
@@ -26,7 +32,11 @@
         <button id="reset-button" type="button" name="reset"></button>
       </div>
     </div>
+
+
     <script type="text/javascript" src="lib/jquery-3.3.1.min.js">
+    </script>
+    <script type="text/javascript" src="src/weather.js">
     </script>
     <script type="text/javascript" src="src/interface.js">
     </script>

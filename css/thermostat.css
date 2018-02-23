@@ -1,5 +1,6 @@
 * {
   font-family: 'Orbitron', sans-serif;
+  text-align: center;
 }
 
 button {
@@ -16,22 +17,17 @@ button:focus {
   outline: 0;
 }
 
-.on {
-  box-shadow: none !important;
-  border: 1px solid black;
+.weather {
+  margin-top: 40px;
 }
 
-.eco {
-  box-shadow: 4px 5px 6px 5px #7dd88d !important;
-}
-
-.container {
+.thermostat {
   width: 200px;
   height: 320px;
   font-size: 25px;
   text-align: center;
   margin: 0 auto;
-  margin-top: 30vh;
+  margin-top: 15vh;
   border: 1px solid black;
   border-radius: 15px;
   box-shadow: 3px 4px 7px 3px black;
@@ -47,6 +43,27 @@ button:focus {
   /* background-color: #c1c1c1; /* #cc6666, #66cc78 */
   font-family: 'Orbitron', sans-serif;
   padding: 10px;
+}
+
+.on {
+  box-shadow: none;
+  border: 1px solid black;
+}
+
+.eco {
+  box-shadow: 4px 5px 6px 5px #7dd88d;
+}
+
+.low-usage {
+  background-color: #66cc78;
+}
+
+.medium-usage {
+  background-color: #c1c1c1;
+}
+
+.high-usage {
+  background-color: #cc6666;
 }
 
 #power-save {
@@ -66,16 +83,4 @@ button:focus {
 #reset-text {
   font-family: 'Orbitron', sans-serif;
   font-size: 13px;
-}
-
-.low-usage {
-  background-color: #66cc78;
-}
-
-.medium-usage {
-  background-color: #c1c1c1;
-}
-
-.high-usage {
-  background-color: #cc6666;
 }
