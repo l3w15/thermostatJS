@@ -9,6 +9,7 @@ $(document).ready(function() {
 
       $.get(`${URL}${lat}&${long}&units=metric&${API_KEY}`, function(data) {
         getWeather(data);
+        console.log(data);
       });
     });
   } else {
