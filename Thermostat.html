@@ -9,17 +9,21 @@
     <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
   </head>
   <body>
-    <div class="container">
+    <div class="container eco">
       <div class="temp-display">
         <h1 id="current-temp"></h1>
-        <span id="usage">medium-usage</span>  <!-- high-usage, low-usage  -->
+        <span id="usage"></span>  <!-- high-usage, low-usage  -->
       </div>
       <div class="temp-controls">
         <button id="down" type="button">Down</button>
         <button id="up" type="button">Up</button>
       </div>
       <div class="power-save-switch">
-        <button id="power-save" type="button" name="power-save">Eco-mode</button>
+        <button class="on" id="power-save" type="button" name="power-save">Eco-mode</button>
+      </div>
+      <div class="reset-button">
+        <span id="reset-text">Reset</span>
+        <button id="reset-button" type="button" name="reset"></button>
       </div>
     </div>
     <script type="text/javascript" src="lib/jquery-3.3.1.min.js">

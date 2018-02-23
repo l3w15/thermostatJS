@@ -1,25 +1,33 @@
+* {
+  font-family: 'Orbitron', sans-serif;
+}
 
 button {
   border-radius: 10px;
-  box-shadow: 1px 1px 7px 3px black;
+  box-shadow: 2px 2px 2px 1px black;
+  padding-top: 6px;
   margin: 5px;
-  height: 20px;
+  height: 25px;
   width: 60px;
+  font-size: 13px;
 }
 
 button:focus {
-  outline:0;
+  outline: 0;
 }
 
 .on {
   box-shadow: none !important;
-  background-color: #66cc78;
   border: 1px solid black;
+}
+
+.eco {
+  box-shadow: 4px 5px 6px 5px #7dd88d !important;
 }
 
 .container {
   width: 200px;
-  height: 300px;
+  height: 320px;
   font-size: 25px;
   text-align: center;
   margin: 0 auto;
@@ -36,7 +44,7 @@ button:focus {
   border: 1px solid black;
   border-radius: 10px;
   width: 150;
-  background-color: #c1c1c1; /* #cc6666, #66cc78 */
+  /* background-color: #c1c1c1; /* #cc6666, #66cc78 */
   font-family: 'Orbitron', sans-serif;
   padding: 10px;
 }
@@ -47,4 +55,27 @@ button:focus {
 
 #usage {
   font-size: 18px;
+}
+
+#reset-button {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+}
+
+#reset-text {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 13px;
+}
+
+.low-usage {
+  background-color: #66cc78;
+}
+
+.medium-usage {
+  background-color: #c1c1c1;
+}
+
+.high-usage {
+  background-color: #cc6666;
 }

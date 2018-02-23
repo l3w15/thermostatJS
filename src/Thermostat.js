@@ -6,22 +6,23 @@ const DEFAULT_TEMP = 20;
 var Thermostat = function() {
   this.temperature = DEFAULT_TEMP;
   this.powerSave = true;
+  this.color = '#c1c1c1';
 };
 
 Thermostat.prototype = {
   up: function() {
     if (this.temperature < 25 && this.powerSave) {
-      this.temperature ++;
+      this.temperature++;
     } else if (this.temperature < 32 && !this.powerSave) {
-      this.temperature ++;
+      this.temperature++;
     } else {
-      throw 'Maximum temperature reached'
+      throw 'Maximum temperature reached';
     }
   },
 
   down: function() {
-    if (this.temperature > MIN_TEMP){
-      this.temperature --;
+    if (this.temperature > MIN_TEMP) {
+      this.temperature--;
     } else {
       throw 'Minimum temperature reached';
     }
@@ -35,13 +36,20 @@ Thermostat.prototype = {
     this.temperature = DEFAULT_TEMP;
   },
 
-  energyUsage: function(){
-    if (this.temperature < 18){
+  powerSaveSwitch: function() {
+    this.powerSave = !this.powerSave;
+  },
+
+  energyUsage: function() {
+    if (this.temperature < 18) {
+      this.color = '#66cc78';
       return 'low-usage';
-    } else if (this.temperature < 25){
+    } else if (this.temperature < 25) {
+      this.color = '#c1c1c1';
       return 'medium-usage';
     } else {
+      this.color = '#cc6666';
       return 'high-usage';
     }
-  },
+  }
 };
