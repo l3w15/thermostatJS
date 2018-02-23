@@ -5,7 +5,7 @@
     <title>Thermostat</title>
     <script type="text/javascript" src="src/thermostat.js">
     </script>
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/thermostat.css">
     <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
   </head>
@@ -21,8 +21,12 @@
         <span id="usage"></span>  <!-- high-usage, low-usage  -->
       </div>
       <div class="temp-controls">
-        <button id="down" type="button">Down</button>
-        <button id="up" type="button">Up</button>
+        <button id="down" type="button">
+          <i class="fa fa-minus"></i>
+        </button>
+        <button id="up" type="button">
+          <i class="fa fa-plus"></i>
+        </button>
       </div>
       <div class="power-save-switch">
         <button class="on" id="power-save" type="button" name="power-save">Eco-mode</button>

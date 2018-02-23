@@ -18,7 +18,7 @@ $(document).ready(function() {
 
   $('#power-save').click(function() {
     $(this).toggleClass('on');
-    $('.container').toggleClass('eco');
+    $('.thermostat').toggleClass('eco');
     thermostat.powerSaveSwitch();
   });
 

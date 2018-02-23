@@ -9,7 +9,6 @@ button {
   padding-top: 6px;
   margin: 5px;
   height: 25px;
-  width: 60px;
   font-size: 13px;
 }
 
@@ -18,7 +17,7 @@ button:focus {
 }
 
 .weather {
-  margin-top: 40px;
+  margin-top: 80px;
 }
 
 .thermostat {
@@ -27,7 +26,7 @@ button:focus {
   font-size: 25px;
   text-align: center;
   margin: 0 auto;
-  margin-top: 15vh;
+  margin-top: 13vh;
   border: 1px solid black;
   border-radius: 15px;
   box-shadow: 3px 4px 7px 3px black;
@@ -64,6 +63,12 @@ button:focus {
 
 .high-usage {
   background-color: #cc6666;
+}
+
+#down, #up {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
 }
 
 #power-save {
