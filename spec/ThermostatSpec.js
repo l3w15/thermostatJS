@@ -10,7 +10,7 @@ describe('Thermostat', function(){
     thermostat = new Thermostat();
     tempUp = function(number) {
       for (var i = 0; i < number; i++) {
-        thermostat.up();
+        thermostat.func();
       }
     };
     tempDown = function(number) {
@@ -50,10 +50,12 @@ describe('Thermostat', function(){
       tempDown(3);
       expect(thermostat.energyUsage()).toEqual('low-usage')
     });
+
     it('returns "medium-usage" for temperatures between 18 and 24', function(){
       tempUp(2);
       expect(thermostat.energyUsage()).toEqual('medium-usage')
     });
+
     it('returns "high-usage" for temperatures > 24 ', function(){
       thermostat.powerSave = false;
       tempUp(6);

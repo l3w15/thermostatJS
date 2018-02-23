@@ -18,6 +18,7 @@ Thermostat.prototype = {
       throw 'Maximum temperature reached'
     }
   },
+
   down: function() {
     if (this.temperature > MIN_TEMP){
       this.temperature --;
@@ -25,9 +26,15 @@ Thermostat.prototype = {
       throw 'Minimum temperature reached';
     }
   },
+
+  getTemp: function() {
+    return this.temperature;
+  },
+
   reset: function() {
     this.temperature = DEFAULT_TEMP;
   },
+
   energyUsage: function(){
     if (this.temperature < 18){
       return 'low-usage';
