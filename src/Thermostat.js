@@ -37,6 +37,9 @@ Thermostat.prototype = {
   },
 
   powerSaveSwitch: function() {
+    if (!this.powerSave && this.getTemp() > 25) {
+      this.temperature = 25;
+    }
     this.powerSave = !this.powerSave;
   },
 

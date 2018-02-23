@@ -20,9 +20,11 @@ $(document).ready(function() {
     $(this).toggleClass('on');
     $('.thermostat').toggleClass('eco');
     thermostat.powerSaveSwitch();
+    updateTemp();
+    updateUsage();
   });
 
-  $('#reset-button').click(function(){
+  $('#reset-button').click(function() {
     thermostat.reset();
     updateTemp();
     updateUsage();

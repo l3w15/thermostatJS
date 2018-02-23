@@ -80,6 +80,13 @@ describe('Thermostat', function() {
       thermostat.powerSaveSwitch();
       expect(thermostat.powerSave).toBe(false);
     });
+
+    it('Moves temperature back down to 25 if temperature is > 25', function() {
+      thermostat.powerSaveSwitch();
+      tempUp(7);
+      thermostat.powerSaveSwitch();
+      expect(thermostat.getTemp()).toBe(25);
+    });
   });
 
   describe('Power saving off', function() {
