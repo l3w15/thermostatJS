@@ -1,16 +1,23 @@
-$(document).ready(function(){
+$(document).ready(function() {
+  const API_KEY = 'APPID=475e86861ce16b233d9d515fea8e9473';
+  const URL = 'https://api.openweathermap.org/data/2.5/weather?';
 
-  const API_KEY = '475e86861ce16b233d9d515fea8e9473';
+  if ('geolocation' in navigator) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      var lat = `lat=${position.coords.latitude.toFixed(2)}`;
+      var long = `lon=${position.coords.longitude.toFixed(2)}`;
+      console.log(lat);
+      console.log(long);
 
-  // 51.5173436,-0.0754695
+      $.get(`${URL}${lat}&${long}&units=metric&${API_KEY}`, function(data) {
+        console.log(data);
 
-  const URL = 'https://api.openweathermap.org/data/2.5/weather?lat=51.51&lon=-0.07&units=metric&APPID=';
-
-  $.get(URL + API_KEY, function(data){
-    console.log(data);
-
-    $('#location').text(data.name);
-    $('#local-temp').prepend(data.main.temp);
-    $('#weather-description').text(data.weather[0].description);
-  });
+        $('#location').text(data.name);
+        $('#local-temp').text(`${data.main.temp}${String.fromCharCode(176)}C`);
+        $('#weather-description').text(data.weather[0].description);
+      });
+    });
+  } else {
+    console.log('geolocation unavailable!');
+  }
 });

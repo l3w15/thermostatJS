@@ -3,7 +3,8 @@
   text-align: center;
 }
 
-button {
+button,
+input {
   border-radius: 10px;
   box-shadow: 2px 2px 2px 1px black;
   padding-top: 6px;
@@ -65,7 +66,8 @@ button:focus {
   background-color: #cc6666;
 }
 
-#down, #up {
+#down,
+#up {
   width: 30px;
   border-radius: 50%;
   border: none;
@@ -97,4 +99,13 @@ button:focus {
 #reset-text {
   font-family: 'Orbitron', sans-serif;
   font-size: 13px;
+}
+
+#city {
+  height: 20px;
+  margin-top: 15px;
+}
+
+#weather-description:first-letter {
+  text-transform: capitalize;
 }

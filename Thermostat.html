@@ -11,9 +11,16 @@
   </head>
   <body>
     <div class="weather">
-      <h2 id="location"></h2>
-      <h2 id="local-temp">&deg;C</h2>
+      <h2 id="location">Fetching Location...</h2>
+      <h2 id="local-temp"></h2>
       <h2 id="weather-description"></h2>
+    </div>
+
+    <div class="city-selector">
+      <label for="city">Get a different city's weather</label>
+      <br>
+      <input id="city" type="text" name="city" placeholder="Enter a city...">
+      <input id="search-city" type="Submit" value="Search">
     </div>
     <div class="thermostat eco">
       <div class="temp-display">
