@@ -8,7 +8,7 @@ button {
   box-shadow: 2px 2px 2px 1px black;
   padding-top: 6px;
   margin: 5px;
-  height: 25px;
+  height: 30px;
   font-size: 13px;
 }
 
@@ -50,7 +50,7 @@ button:focus {
 }
 
 .eco {
-  box-shadow: 4px 5px 6px 5px #7dd88d;
+  box-shadow: 4px 5px 7px 4px #7dd88d;
 }
 
 .low-usage {
@@ -67,8 +67,17 @@ button:focus {
 
 #down, #up {
   width: 30px;
-  height: 30px;
   border-radius: 50%;
+  border: none;
+  margin-right: 20px;
+}
+
+#up {
+  background-color: #ed8b8b;
+}
+
+#down {
+  background-color: #8bdced;
 }
 
 #power-save {
