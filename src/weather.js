@@ -10,14 +10,26 @@ $(document).ready(function() {
       console.log(long);
 
       $.get(`${URL}${lat}&${long}&units=metric&${API_KEY}`, function(data) {
-        console.log(data);
-
-        $('#location').text(data.name);
-        $('#local-temp').text(`${data.main.temp}${String.fromCharCode(176)}C`);
-        $('#weather-description').text(data.weather[0].description);
+        getWeather(data);
       });
     });
   } else {
     console.log('geolocation unavailable!');
   }
+
+  $('#search-city').click(function() {
+    var $city = $('#city').val();
+    console.log($city);
+    $.get(`${URL}q=${$city}&units=metric&${API_KEY}`, function(data) {
+      getWeather(data);
+    });
+    $('#city').val('');
+  });
+
+  function getWeather(data) {
+    console.log(data);
+    $('#location').text(data.name);
+    $('#local-temp').text(`${data.main.temp}${String.fromCharCode(176)}C   `);
+    $('#weather-description').text(data.weather[0].description);
+  };
 });

@@ -13,12 +13,18 @@ input {
   font-size: 13px;
 }
 
-button:focus {
+button:focus,
+input:focus {
   outline: 0;
 }
 
 .weather {
   margin-top: 80px;
+}
+
+.weather-display {
+  font-size: 28px;
+  margin: 10px;
 }
 
 .thermostat {
