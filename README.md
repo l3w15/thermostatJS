@@ -23,4 +23,6 @@ You can ask about the thermostat's current energy usage: < 18 is low-usage, < 25
 (In the challenges where we add an interface, low-usage will be indicated with green, medium-usage indicated with black, high-usage indicated with red.)
 ```
 
+We used TDD testing with Jasmine to build the app from scratch using JavaScript and jQuery.
+
 There was a bonus task to show the current outdoor temperature, we then built on that by allowing a user to get the weather for any city in the world through an API call to openweathermap.org.
